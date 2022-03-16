@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springdemo.example.todo.mappers.TodoMapper">
+	<!-- 結果と結果を受け取るクラスの紐づけ -->
+	<resultMap type="com.springdemo.example.todo.domains.TodoModel" id="resultTodoMap">
+		<result property="id" column="id"/>
+		<result property="task" column="task" />
+	</resultMap>
+	<!-- SQL -->
+	<select id="selectAll" resultMap="resultTodoMap">
+		select * from Todo
+	</select>
+	<select id="selectById" resultType="com.springdemo.example.todo.domains.TodoModel">
+		select * from todo where id = #{id}
+	</select>
+	
+	<insert id="insert" parameterType="com.springdemo.example.todo.domains.TodoModel"
+	useGeneratedKeys="true" keyProperty="id">
+		insert into todo (task) values (#{task})
+	</insert>
+	
+	<update id="update" parameterType="com.springdemo.example.todo.domains.TodoModel">
+		update todo set task = #{task} where id = #{id}
+	</update>
+	
+	<delete id="delete" >
+		delete from todo where id = #{id}
+	</delete>
+</mapper>

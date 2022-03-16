@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: tom
+Build-Jdk: 17.0.1
+Implementation-Title: ToDo
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.springdemo.example
+Implementation-URL: http://www.example.com
+Created-By: Maven Integration for Eclipse
+
