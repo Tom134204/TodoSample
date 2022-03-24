@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
 import com.springdemo.example.todo.domains.TodoModel;
 
 /**
- * @author tom
+ * @author t.yamazaki
  *
  */
 @Mapper
